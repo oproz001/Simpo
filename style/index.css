@@ -1,0 +1,140 @@
+body {
+    background: linear-gradient(135deg, #2b2b2b, #121212);
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 50px;
+    padding: 30px;
+}
+.form-container {
+    max-width: 400px;
+    margin-right: 20px;
+    padding: 30px;
+    background-color: rgba(40, 40, 40, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+    animation: slideIn 0.5s ease forwards;
+}
+@keyframes slideIn {
+    from {
+        transform: translateX(-50%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    color: #28a745;
+}
+.form-control {
+    background-color: #555;
+    border: 1px solid #28a745;
+    color: #fff;
+}
+.form-control:focus {
+    background-color: #666;
+    border-color: #28a745;
+    box-shadow: 0 0 5px rgba(40, 167, 69, 0.5);
+}
+.form-label {
+    font-weight: bold;
+    color: #28a745;
+}
+.btn-submit {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+.btn-submit:hover {
+    background-color: #218838;
+}
+.table-container {
+    flex: 1;
+    min-width: 300px;
+    animation: fadeIn 0.5s ease forwards;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+table {
+    margin-top: 30px;
+    border-collapse: collapse;
+    width: 100%;
+}
+th {
+    background-color: #28a745;
+    color: white;
+    padding: 10px;
+}
+td {
+    background-color: #444;
+    color: white;
+    padding: 10px;
+    border-bottom: 1px solid #555;
+}
+td button {
+    margin-right: 5px;
+}
+.btn-edit {
+    background-color: #ffc107;
+    color: #fff;
+}
+.btn-edit:hover {
+    background-color: #e0a800;
+}
+.btn-delete {
+    background-color: #dc3545;
+    color: #fff;
+}
+.btn-delete:hover {
+    background-color: #c82333;
+}
+.form-group {
+    margin-bottom: 20px;
+}
+/* Toast styles */
+.toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    transform: translateY(20px);
+}
+.toast.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* Carousel styles */
+.carousel-item {
+    height: 300px;
+}
+.carousel-item img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
