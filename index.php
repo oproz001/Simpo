@@ -166,30 +166,33 @@
     </div>
 
     <!-- Toast Notification -->
+    <?php if(isset($_GET['msgerror'])) { ?>
+    <div id="toast" class="toast bg-danger text-white" role="alert" aria-live="assertive" aria-atomic="false">
+        <div class="toast-header">
+            <strong class="me-auto">Error</strong>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+                <?= $_GET['msgerror'] ?>
+            </div>
+        </div>
+        <?php } ?>
+        
+    <?php if(isset($_GET['msg'])) { ?>
     <div id="toast" class="toast bg-success text-white" role="alert" aria-live="assertive" aria-atomic="true">
         <div class="toast-header">
             <strong class="me-auto">Success</strong>
             <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast" aria-label="Close"></button>
         </div>
         <div class="toast-body">
-            <?php if(isset($_GET['msg'])) { ?>
+            
                 <?= $_GET['msg'] ?>
-            <?php } ?>
+            </div>
         </div>
-    </div>
-    <div id="toast" class="toast bg-danger text-white" role="alert" aria-live="assertive" aria-atomic="true">
-        <div class="toast-header">
-            <strong class="me-auto">Error</strong>
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast" aria-label="Close"></button>
-        </div>
-        <div class="toast-body">
-            <?php if(isset($_GET['msgerror'])) { ?>
-                <?= $_GET['msgerror'] ?>
-            <?php } ?>
-        </div>
-    </div>
-
+        <?php } ?>
+        
     <script src="style/js/bootstrap.bundle.min.js"></script>
+
 
     <script>
         // Show toast notification for 5 seconds

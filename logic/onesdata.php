@@ -15,16 +15,16 @@ if (isset($_POST['submit'])) {
       //check if important fields are empty 
       if (empty($username)) {
          $msgerror = 'User name is required';
-         header("location: ../index.php?msgerror = $msgerror");
+         header("location: ../index.php?msgerror= $msgerror");
       } else if (empty($useremail)) {
          $msgerror = 'Email is required';
-         header("location: ../index.php?msgerror = $msgerror");
+         header("location: ../index.php?msgerror= $msgerror");
       } else if (empty($userregno)) {
          $msgerror = 'Registration Number is required';
-         header("location: ../index.php?msgerror = $msgerror");
+         header("location: ../index.php?msgerror= $msgerror");
       } else if (empty($userpass)) {
          $msgerror = 'Password  is required';
-         header("location: ../index.php?msgerror = $msgerror");
+         header("location: ../index.php?msgerror= $msgerror");
       }
          else{
 
